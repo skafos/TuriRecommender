@@ -1,0 +1,7 @@
+project_token: 900286b6854134e44716b969
+name: TuriRecommenderTest
+jobs: 
+  - job_id: c5ba2104-aa92-4a8d-ada1-f0c2ed5ba237
+    language: python
+    name: Main
+    entrypoint: "main.py"
