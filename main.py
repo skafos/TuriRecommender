@@ -10,8 +10,6 @@ model = tc.recommender.create(training_data, 'userId', 'movieId')
 
 results = model.recommend()
 
-model.recommend(users=['239'])
-
 validation_data.print_rows(num_rows=30)
 
 model.evaluate(validation_data)
