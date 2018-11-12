@@ -5,3 +5,5 @@ jobs:
     language: python
     name: Main
     entrypoint: "main.py"
+    
+use_cache: false
