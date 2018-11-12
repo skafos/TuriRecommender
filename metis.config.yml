@@ -5,5 +5,11 @@ jobs:
     language: python
     name: Main
     entrypoint: "main.py"
-    
+resources:
+      requests:
+        cpu: 2
+        memory: 4Gi
+      limits:
+        cpu: 2
+        memory: 4Gi
 use_cache: false
