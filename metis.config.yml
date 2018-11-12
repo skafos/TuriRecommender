@@ -6,10 +6,10 @@ jobs:
     name: Main
     entrypoint: "main.py"
 resources:
-      requests:
-        cpu: 1
-        memory: 8Gi
-      limits:
-        cpu: 1
-        memory: 8Gi
+    requests:
+      cpu: 1
+      memory: 8Gi
+    limits:
+      cpu: 1
+      memory: 8Gi
 use_cache: false
