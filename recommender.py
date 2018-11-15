@@ -1,7 +1,9 @@
 import turicreate as tc
 import time
 
-#tc.config.set_num_gpus(-1)
+#from skafos import *
+
+#ska = Skafos() #initialize Skafos
 
 # read in the actions and items 
 actions = tc.SFrame.read_csv('https://s3.amazonaws.com/skafos.example.data/MovieLensDataset/ml-20m/ratings.csv')
@@ -22,4 +24,8 @@ validation_data.print_rows(num_rows=30)
 
 # evaluate the model
 model.evaluate(validation_data)
-model.export_coreml("./MyRecommender.mlmodel")
+print(model.export_coreml())
+print(model.export_coreml("./MyRecommender.mlmodel"))
+
+
+#ska.engine.save_model(model_name, model_data, tags = ["0.1.0", "latest"], access="private").result()
