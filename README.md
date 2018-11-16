@@ -13,7 +13,9 @@ For more information on getting a job up and running on Skafos, take a look at o
 ### Components
 In this repository you will find:
 - `recommender.py` - A script that loads some example data from a public S3 bucket, trains a recommender, validates the model and saves the model.
+
 - `recommender.ipynb` - A notebook that replicates the `recommender.py` script. To see some example output, check out that notebook here on GitHub.
+
 `requirements.txt` and `metis.config.yml` - Two files that Skafos requires to run jobs.
 
 ### How do I integrate my own data?
