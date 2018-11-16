@@ -1,6 +1,6 @@
 ## Turi Recommendation Example
 
-In this example, we provide a pre-baked recommendation engine model for movie ratings. Most The example in this repository originated [here](https://apple.github.io/turicreate/docs/userguide/recommender/). 
+In this example, we provide a pre-baked recommendation engine model for movie ratings. The example in this repository comes from TuriCreate's own example that can be found [here](https://apple.github.io/turicreate/docs/userguide/recommender/). 
 
 To get this model up and running on Skafos:
 - Sign up for a Skafos account
@@ -10,7 +10,7 @@ To get this model up and running on Skafos:
 
 For more information on getting a job up and running on Skafos, take a look at our documentation.
 
-## Components
+### Components
 In this repository you will find:
 - `recommender.py` - A script that loads some example data from a public S3 bucket, trains a recommender, validates the model and saves the model.
 - `recommender.ipynb` - A notebook that replicates the `recommender.py` script. To see some example output, check out that notebook here on GitHub.
