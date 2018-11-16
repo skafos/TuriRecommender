@@ -10,13 +10,15 @@ To get this model up and running on Skafos:
 
 For more information on getting a job up and running on Skafos, take a look at our documentation.
 
+To adapt this to your own problem, check out more below.
+
 ### Components
 In this repository you will find:
 - `recommender.py` - A script that loads some example data from a public S3 bucket, trains a recommender, validates the model and saves the model.
 - `recommender.ipynb` - A notebook that replicates the `recommender.py` script. To see some example output, check out that notebook here on GitHub.
 - `requirements.txt` and `metis.config.yml` - Two files that Skafos requires to run jobs.
 
-### How do I integrate my own data?
+### The Data
 Most likely you want to adapt this example to your own problem. Perhaps you have customers on your ecommerce app that you want to recommend new items to or you have a music streaming app and you want to recommend new music. 
 
 Below you can see what the data look like and how you might input your own data to get a model up and running for your problem.
@@ -45,3 +47,8 @@ Below you can see what the data look like and how you might input your own data 
 |         5 | Father of the Bride Part II (1995) | Comedy                                      |
 
 </td></tr> </table>
+
+### Integrating your own data
+To build a recommender we call `tc.recommender.create(observation_data = training_data, user_id = 'userId', item_id= 'movieId')`. 
+
+If you had some e-commerce data where you had `shoppers`, indexed by `shopper_id`, and `products` indexed by `product_id`. Your function call would look like: `tc.recommender.create(observation_data = training_data, 'user_id' = 'shopper_id', item_id = 'product_id'`
