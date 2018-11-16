@@ -12,22 +12,22 @@ Below you can see what the data look like and how you might input your own data 
 <tr><th>Actions </th><th>Items </th></tr>
 <tr><td>
 
-|    |   userId |   movieId |   rating |   timestamp |
-|---:|---------:|----------:|---------:|------------:|
-|  0 |        1 |         2 |      3.5 | 1.11249e+09 |
-|  1 |        1 |        29 |      3.5 | 1.11248e+09 |
-|  2 |        1 |        32 |      3.5 | 1.11248e+09 |
-|  3 |        1 |        47 |      3.5 | 1.11248e+09 |
-|  4 |        1 |        50 |      3.5 | 1.11248e+09 |
+|   userId |   movieId |   rating |   timestamp |
+|---------:|----------:|---------:|------------:|
+|        1 |         2 |      3.5 | 1.11249e+09 |
+|        1 |        29 |      3.5 | 1.11248e+09 |
+|        1 |        32 |      3.5 | 1.11248e+09 |
+|        1 |        47 |      3.5 | 1.11248e+09 |
+|        1 |        50 |      3.5 | 1.11248e+09 |
 
 </td><td>
 
-|    |   movieId | title                              | genres                                      |
-|---:|----------:|:-----------------------------------|:--------------------------------------------|
-|  0 |         1 | Toy Story (1995)                   | Adventure|Animation|Children|Comedy|Fantasy |
-|  1 |         2 | Jumanji (1995)                     | Adventure|Children|Fantasy                  |
-|  2 |         3 | Grumpier Old Men (1995)            | Comedy|Romance                              |
-|  3 |         4 | Waiting to Exhale (1995)           | Comedy|Drama|Romance                        |
-|  4 |         5 | Father of the Bride Part II (1995) | Comedy                                      |
+|   movieId | title                              | genres                                      |
+|----------:|:-----------------------------------|:--------------------------------------------|
+|         1 | Toy Story (1995)                   | Adventure|Animation|Children|Comedy|Fantasy |
+|         2 | Jumanji (1995)                     | Adventure|Children|Fantasy                  |
+|         3 | Grumpier Old Men (1995)            | Comedy|Romance                              |
+|         4 | Waiting to Exhale (1995)           | Comedy|Drama|Romance                        |
+|         5 | Father of the Bride Part II (1995) | Comedy                                      |
 
 </td></tr> </table>
