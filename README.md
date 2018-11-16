@@ -1,8 +1,22 @@
 ## Turi Recommendation Example
 
-In this example, we provide a pre-baked recommendation engine model for movie ratings. Most The example in this repository originated [here](https://apple.github.io/turicreate/docs/userguide/recommender/)
+In this example, we provide a pre-baked recommendation engine model for movie ratings. Most The example in this repository originated [here](https://apple.github.io/turicreate/docs/userguide/recommender/). 
 
-## How do I integrate my own data?
+To get this model up and running on Skafos:
+- Sign up for a Skafos account
+- Fork and clone this repository
+- Adapt your metis.config.yml to run on your new Skafos account
+- git push skafos
+
+For more information on getting a job up and running on Skafos, take a look at our documentation.
+
+## Components
+In this repository you will find:
+- `recommender.py` - A script that loads some example data from a public S3 bucket, trains a recommender, validates the model and saves the model.
+- `recommender.ipynb` - A notebook that replicates the `recommender.py` script. To see some example output, check out that notebook here on GitHub.
+`requirements.txt` and `metis.config.yml` - Two files that Skafos requires to run jobs.
+
+### How do I integrate my own data?
 Most likely you want to adapt this example to your own problem. Perhaps you have customers on your ecommerce app that you want to recommend new items to or you have a music streaming app and you want to recommend new music. 
 
 Below you can see what the data look like and how you might input your own data to get a model up and running for your problem.
