@@ -21,7 +21,7 @@ In this repository you will find:
 ### The Data
 Most likely you want to adapt this example to your own problem. Perhaps you have customers on your ecommerce app that you want to recommend new items to or you have a music streaming app and you want to recommend new music. 
 
-Below you can see what the data look like and how you might input your own data to get a model up and running for your problem.
+Below you can see what the data look like and how you might input your own data to get a model up and running for your problem. The training data in this example is the **actions** data, which you can see below. The recommendations are being built based on just one dimension in this example, **rating**.
 
 
 <table>
