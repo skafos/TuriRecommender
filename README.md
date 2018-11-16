@@ -11,6 +11,7 @@ Below you can see what the data look like and how you might input your own data 
 <table>
 <tr><th>Actions </th><th>Items </th></tr>
 <tr><td>
+
 |    |   userId |   movieId |   rating |   timestamp |
 |---:|---------:|----------:|---------:|------------:|
 |  0 |        1 |         2 |      3.5 | 1.11249e+09 |
