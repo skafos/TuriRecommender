@@ -26,7 +26,7 @@ results = model.recommend()
 validation_data.print_rows(num_rows=30)
 
 # evaluate the model
-ska.log("Evaluating the model on the validation data")
+ska.log("Evaluating the model on the validation data", labels = ['turi_recommender'])
 model.evaluate(validation_data)
 
-#ska.engine.save_model(model_name, model_data, tags = ["0.1.0", "latest"], access="private").result()
+ska.engine.save_model(model_name, model_data, tags = ["0.1.0", "latest"], access="private").result()
