@@ -1,7 +1,7 @@
 import turicreate as tc
 import time
 
-from skafos import *
+from skafossdk import *
 
 ska = Skafos() #initialize Skafos
 
