@@ -49,8 +49,8 @@ Below you can see what the data look like and how you might input your own data 
 </td></tr> </table>
 
 ### Integrating your own data
-To build a recommender we call
-  `tc.recommender.create(observation_data = training_data, user_id = 'userId', item_id= 'movieId')`. 
+To build a recommender we call:
+    - `tc.recommender.create(observation_data = training_data, user_id = 'userId', item_id= 'movieId')`. 
 
 If you had some e-commerce data where you had `shoppers`, indexed by `shopper_id`, and `products` indexed by `product_id`. Your function call would look like: 
-  `tc.recommender.create(observation_data = training_data, 'user_id' = 'shopper_id', item_id = 'product_id'`
+    - `tc.recommender.create(observation_data = training_data, 'user_id' = 'shopper_id', item_id = 'product_id'`
