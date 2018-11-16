@@ -7,7 +7,10 @@ Most likely you want to adapt this example to your own problem. Perhaps you have
 
 Below you can see what the data look like and how you might input your own data to get a model up and running for your problem.
 
-### Actions
+
+<table>
+<tr><th>Actions </th><th>Items </th></tr>
+<tr><td>
 |    |   userId |   movieId |   rating |   timestamp |
 |---:|---------:|----------:|---------:|------------:|
 |  0 |        1 |         2 |      3.5 | 1.11249e+09 |
@@ -16,7 +19,8 @@ Below you can see what the data look like and how you might input your own data 
 |  3 |        1 |        47 |      3.5 | 1.11248e+09 |
 |  4 |        1 |        50 |      3.5 | 1.11248e+09 |
 
-### Items
+</td><td>
+
 |    |   movieId | title                              | genres                                      |
 |---:|----------:|:-----------------------------------|:--------------------------------------------|
 |  0 |         1 | Toy Story (1995)                   | Adventure|Animation|Children|Comedy|Fantasy |
@@ -24,3 +28,5 @@ Below you can see what the data look like and how you might input your own data 
 |  2 |         3 | Grumpier Old Men (1995)            | Comedy|Romance                              |
 |  3 |         4 | Waiting to Exhale (1995)           | Comedy|Drama|Romance                        |
 |  4 |         5 | Father of the Bride Part II (1995) | Comedy                                      |
+
+</td></tr> </table>
