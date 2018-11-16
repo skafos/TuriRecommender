@@ -52,5 +52,16 @@ Below you can see what the data look like and how you might input your own data 
 To build a recommender we call:
 - `tc.recommender.create(observation_data = training_data, user_id = 'userId', item_id= 'movieId')`. 
 
-If you had some e-commerce data where you had `shoppers`, indexed by `shopper_id`, and `products` indexed by `product_id`. Your function call would look like: 
+Suppose you had some e-commerce data where you had `shoppers`, indexed by `shopper_id`, and `products` indexed by `product_id`. Here is what the data might look like, ignoring the items table for now and just the looking at the actions table:
+
+|  shopper_id |   product_id |   rating |   timestamp |
+|---------:|----------:|---------:|------------:|
+|        1 |        1231 |      5 |  1112586027 |
+|        1 |        1411 |      3 |  1112584676 |
+|        1 |        2332 |      4 |  1112684819 |
+|        1 |        4132 |      2 |  1112184727 |
+|        1 |        1241 |      4 |  1112484580 |
+
+
+Your function call would look like: 
 - `tc.recommender.create(observation_data = training_data, 'user_id' = 'shopper_id', item_id = 'product_id'`
