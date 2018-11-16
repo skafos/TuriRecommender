@@ -3,12 +3,12 @@
 In this example, we provide a pre-baked recommendation engine model for movie ratings. The example in this repository comes from TuriCreate's own example that can be found [here](https://apple.github.io/turicreate/docs/userguide/recommender/). 
 
 To get this model up and running on Skafos:
-- Sign up for a Skafos account
+- [Sign Up](https://dashboard.metismachine.io/sign-up) for a Skafos account
 - Fork and clone this repository
 - Adapt your metis.config.yml to run on your new Skafos account
-- git push skafos
+- `git push skafos`
 
-For more information on getting a job up and running on Skafos, take a look at our documentation.
+For more information on getting a job up and running on Skafos, take a look at this example in our [documentation](https://docs.metismachine.io/v1.1/docs/step-by-step-tutorial-churn-modeling).
 
 To adapt this to your own problem, check out more below.
 
