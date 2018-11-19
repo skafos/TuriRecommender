@@ -1,7 +1,7 @@
-project_token: 101d675b749e5cfa9c08f65f
+project_token: < insert project token here >
 name: TuriRecommenderTest
 jobs: 
-  - job_id: a243ea1a-8900-4cc8-bfee-31d8473a1a90
+  - job_id: < create and insert job id for the recommender here >
     language: python
     name: recommender-script
     entrypoint: "recommender.py"

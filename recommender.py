@@ -28,7 +28,7 @@ ska.log("Evaluating the model on the validation data", labels = ['turi_recommend
 model.evaluate(validation_data)
 
 # save the model to my models
-ska.engine.save_model('RecommenderModel', model, tags = ["latest"], access="private").result()
+#ska.engine.save_model('RecommenderModel', model, tags = ["latest"], access="private").result()
 
 
 # save the model locally
