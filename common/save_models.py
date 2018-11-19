@@ -1,5 +1,6 @@
 import gzip
 import os
+from time import sleep
 
 
 '''
@@ -33,7 +34,7 @@ def compress_model(coreml_model_name):
 	Takes as input the name of the model saved
 	Returns a compressed model to be saved to Skafos
 	'''
-	time.sleep(10) # wait for full-model to be written to file
+	sleep(10) # wait for full-model to be written to file
 
 	# load up the model written to file
 	mc = load_mlmodel(coreml_model_name)
@@ -50,13 +51,13 @@ def compress_model(coreml_model_name):
 def skafos_save_model(skafos, model_name, compressed_model, tags = ['latest'], permissions = "private"):
 	# try saving the model
 	try:
-		res = skafos.engine.save_model(coreml_model_name, compressed_model, tags, permissions)
+		res = skafos.engine.save_model(model_name, compressed_model, tags, permissions)
 		print(res.result(), flush=True)
 	except Exception as err:
 		# if we get an error, try again
 		print(f"Unable to save the model = {err}, trying again ...")
 		try:
-			res = skafos.engine.save_model(coreml_model_name, compressed_model, tags, permissions)
+			res = skafos.engine.save_model(model_name, compressed_model, tags, permissions)
 			print(res.result(), flush=True)
 		# if after 2 tries it still won't save, give up and return the error
 		except Exception as err2:

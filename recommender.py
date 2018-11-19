@@ -1,7 +1,7 @@
 import turicreate as tc
 import time
 from skafossdk import *
-import common.save_model as sm
+import common.save_models as sm
 
 ska = Skafos() #initialize Skafos
 
@@ -34,7 +34,7 @@ coreml_model_name = "recommender.mlmodel"
 res = model.export_coreml(coreml_model_name)
 
 # compress the model
-compressed_model_name, compressed_model = compress_model(coreml_model_name)
+compressed_model_name, compressed_model = sm.compress_model(coreml_model_name)
 
 # save to Skafos
 sm.skafos_save_model(skafos = ska, model_name = compressed_model_name,
