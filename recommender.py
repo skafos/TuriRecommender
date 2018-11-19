@@ -1,6 +1,7 @@
 import turicreate as tc
 import time
 from skafossdk import *
+from common.save_model import *
 
 ska = Skafos() #initialize Skafos
 
@@ -27,10 +28,15 @@ validation_data.print_rows(num_rows=30)
 ska.log("Evaluating the model on the validation data", labels = ['turi_recommender'])
 model.evaluate(validation_data)
 
-# save the model to my models
-#ska.engine.save_model('RecommenderModel', model, tags = ["latest"], access="private").result()
+ska.log("Saving the model", labels = ['turi_recommender'])
+# export to coreml
+coreml_model_name = "recommender.mlmodel"
+res = model.export_coreml(coreml_model_name)
 
+# compress the model
+compressed_model_name, compressed_model = compress_model(coreml_model_name)
 
-# save the model locally
-# model.save('./models/turi_recommender.model')
-# model.export_coreml('./models/turi_recommender.mlmodel')
+# save to Skafos
+skafos_save_model(skafos = ska, model_name = compressed_model_name,
+								compressed_model = compressed_model,
+								permissions = 'public')
