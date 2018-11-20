@@ -17,6 +17,7 @@ In this repository you will find:
 - `recommender.py` - A script that loads some example data from a public S3 bucket, trains a recommender, validates the model and saves the model.
 - `recommender.ipynb` - A notebook that replicates the `recommender.py` script. To see some example output, check out that notebook here on GitHub.
 - `requirements.txt` and `metis.config.yml` - Two files that Skafos requires to run jobs.
+- `/models` - directory that contains a saved Turi Create model `.model` and a saved Core ML model `.mlmodel`. (Note these were trained on a sample of the data out of concern for model size.
 
 ### The Data
 Most likely you want to adapt this example to your own problem. Perhaps you have customers on your ecommerce app that you want to recommend new items to or you have a music streaming app and you want to recommend new music. 
