@@ -5,3 +5,11 @@ jobs:
     language: python
     name: recommender
     entrypoint: "recommender.py"
+    resources:
+      requests:
+        cpu: 6
+        memory: 8Gi
+      limits:
+        cpu: 6
+        memory: 8Gi
+use_cache: false
