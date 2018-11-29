@@ -18,17 +18,17 @@ ska.log("Training the recommender", labels = ['turi_recommender'])
 model = tc.recommender.create(training_data, 'userId', 'movieId')
 
 # grab the results of the model
-ska.log("Obtaining the results", labels = ['turi_recommender'])
-results = model.recommend()
+#ska.log("Obtaining the results", labels = ['turi_recommender'])
+#results = model.recommend()
 
 # print the validation data
-validation_data.print_rows(num_rows=30)
+#validation_data.print_rows(num_rows=30)
 
 # evaluate the model
-ska.log("Evaluating the model on the validation data", labels = ['turi_recommender'])
-model.evaluate(validation_data)
+#ska.log("Evaluating the model on the validation data", labels = ['turi_recommender'])
+#model.evaluate(validation_data)
 
-ska.log("Saving the model", labels = ['turi_recommender'])
+#ska.log("Saving the model", labels = ['turi_recommender'])
 # export to coreml
 coreml_model_name = "recommender.mlmodel"
 res = model.export_coreml(coreml_model_name)
