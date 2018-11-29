@@ -3,5 +3,5 @@ name: TuriRecommenderTest
 jobs:
   - job_id: 7df39048-89d6-44cc-be58-39bc59af99b3
     language: python
-    name: Main
-    entrypoint: "main.py"
+    name: recommender
+    entrypoint: "recommender.py"
