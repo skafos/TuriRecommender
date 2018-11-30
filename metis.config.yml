@@ -1,10 +1,10 @@
-project_token: 900286b6854134e44716b969
+project_token: b6a7b9be12b72f59acc40df3
 name: TuriRecommenderTest
-jobs: 
-  - job_id: c5ba2104-aa92-4a8d-ada1-f0c2ed5ba237
+jobs:
+  - job_id: 7df39048-89d6-44cc-be58-39bc59af99b3
     language: python
-    name: Main
-    entrypoint: "main.py"
+    name: recommender
+    entrypoint: "recommender.py"
     resources:
       requests:
         cpu: 6
