@@ -1,6 +1,8 @@
 ## Turi Recommendation Example
 
-In this example, we provide a pre-baked recommendation engine model for movie ratings. The example in this repository comes from TuriCreate's own example that can be found [here](https://apple.github.io/turicreate/docs/userguide/recommender/). 
+*This public repository is designed for use in the Skafos ML delivery platform, which is available at metismachine.com.*
+
+In this example, we provide a recommendation engine model for movie ratings. The example in this repository comes from TuriCreate's own example that can be found [here](https://apple.github.io/turicreate/docs/userguide/recommender/). 
 
 To get this model up and running on Skafos:
 - [Sign Up](https://dashboard.metismachine.io/sign-up) for a Skafos account
@@ -8,21 +10,23 @@ To get this model up and running on Skafos:
 - Adapt your metis.config.yml to run on your new Skafos account
 - `git push skafos`
 
-For more information on getting a job up and running on Skafos, take a look at this example in our [documentation](https://docs.metismachine.io/v1.1/docs/step-by-step-tutorial-churn-modeling).
-
 To adapt this to your own problem, check out more below.
 
-### Components
+## What can you find in this repo?
 In this repository you will find:
 - `recommender.py` - A script that loads some example data from a public S3 bucket, trains a recommender, validates the model and saves the model.
 - `recommender.ipynb` - A notebook that replicates the `recommender.py` script. To see some example output, check out that notebook here on GitHub.
 - `requirements.txt` and `metis.config.yml` - Two files that Skafos requires to run jobs.
 - `/models` - directory that contains a saved Turi Create model `.model` and a saved Core ML model `.mlmodel`. (Note these were trained on a sample of the data out of concern for model size.
 
-### The Data
-Most likely you want to adapt this example to your own problem. Perhaps you have customers on your ecommerce app that you want to recommend new items to or you have a music streaming app and you want to recommend new music. 
+## How to use this repo.
+1. Use the `.mlmodel` file in your app to start making recommendations.
+2. Use the provided code and example data to train the recomemndation engine.
+3. Train a recommender on different data.
 
-Below you can see what the data look like and how you might input your own data to get a model up and running for your problem. The training data in this example is the **actions** data, which you can see below. The recommendations are being built based on just one dimension in this example, **rating**.
+
+### The Data
+The example data for this example is also the example data used by Turi Create in their Recommender Engine Example, the MovieLens 20M Dataset. We have placed an example of this data on a public S3 bucket for this example. The format of this data is shown below. Note that there are two types of files that provide data in two formats: Actions (userID, movieID, rating, and timestamp.) and Metadata for each movie (movieID, title, genre).
 
 
 <table>
@@ -50,11 +54,8 @@ Below you can see what the data look like and how you might input your own data 
 </td></tr> </table>
 
 ### Integrating your own data
-To build a recommender we call:
-- ```python
-    tc.recommender.create(observation_data = training_data, user_id = 'userId', item_id= 'movieId'). 
 
-Suppose you had some e-commerce data where you had `shoppers`, indexed by `shopper_id`, and `products` indexed by `product_id`. Here is what the data might look like, ignoring the items table for now and just the looking at the actions table:
+To build a recommender on your own data, it needs to be in the same format as the tables above. For example, if you had e-commerce data with shoppers, indexed by shopper_id, and products indexed by product_id, you could format it as shown below:
 
 |  shopper_id |   product_id |   rating |   timestamp |
 |---------:|----------:|---------:|------------:|
@@ -65,6 +66,10 @@ Suppose you had some e-commerce data where you had `shoppers`, indexed by `shopp
 |        1 |        1241 |      4 |  1112484580 |
 
 
+You could also read in any relevant metadata about each product_id, if desired.
+
+To build a recommendation engine, you would make the following TC calls:
+
 Your function call would look like: 
 - ```python
-     tc.recommender.create(observation_data = training_data, 'user_id' = 'shopper_id', item_id = 'product_id'
+     tc.recommender.create(observation_data = training_data, 'user_id' = 'shopper_id', item_id = 'product_id'```
