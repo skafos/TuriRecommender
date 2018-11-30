@@ -1,4 +1,4 @@
-# *Turi Recommendation Example*
+# **Turi Recommendation Example**
 
 *This public repository is designed for use in the Skafos ML delivery platform, which is available at metismachine.com.*
 
