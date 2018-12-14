@@ -18,8 +18,8 @@ In this repository you will find:
 - `recommender.ipynb` - A notebook that replicates the `recommender.py` script. To see some example output, check out that notebook here on GitHub.
 - `requirements.txt` and `metis.config.yml` - Two files that Skafos requires to run jobs.
 - `Recommender_Data_Integration_Example.ipynb` - A Jupyter Notebook containing an example of how to get your own data working in the TuriCreate framework.
-- `/models` - a directory that contains a saved TuriCreate model (.model) and a saved CoreML model (.mlmodel)
-- `/common` - a directory that contains functions and code called from the main recommender script.
+- `models/` - a directory that contains a saved TuriCreate model (.model) and a saved CoreML model (.mlmodel)
+- `common/` - a directory that contains functions and code called from the main recommender script.
 
 ## How to use this repo.
 1. Use the `.mlmodel` file in your app to start making recommendations.
