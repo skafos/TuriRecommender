@@ -70,7 +70,7 @@ model = tc.item_similarity_recommender.create(
 Didn't find something you need? Confused by something? Need more guidance?
 
 Please contact us with questions or feedback! Here are two ways:
--  [Signup for our Slack Channel](https://skafosai.slack.com/)
--  [Find us on Reddit](https://reddit.com/r/skafos)
+-  [**Signup for our Slack Channel**](https://skafosai.slack.com/)
+-  [**Find us on Reddit**](https://reddit.com/r/skafos)
 
-Also check out Turi Create's [documentation](https://apple.github.io/turicreate/docs/userguide/recommender/) on recommendation engine basics.
+Also check out Turi Create's [**documentation**](https://apple.github.io/turicreate/docs/userguide/recommender/) on recommendation engine basics.
