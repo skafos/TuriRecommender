@@ -13,4 +13,4 @@ Please contact us with questions or feedback! Here are two ways:
 
 
 -  [**Signup for our Slack Channel**](https://skafosai.slack.com/)
--  [**Find us on Reddit**](https://reddit.com/r/skafos) 
+-  [**Find us on Reddit**](https://reddit.com/r/skafos)
