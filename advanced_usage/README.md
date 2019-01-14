@@ -28,7 +28,7 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 
 </td></tr> </table>
  
- - **Integrating Your Own Data**: Likely, you aren't interested in building a recommendation engine for movies. You probably have a a different product or service that you'd like to recommend to your customers. Fortunately, as long as your data is in a similar format to what is used here, you can use Turi Create's `recommender.create` to build a model. For example, if you had e-commerce data with shoppers, indexed by *shopper_id*, and products indexed by *product_id*, you could format it as shown below. At a minimum you need a column that contains a unique id for each "user" (shopper, viewer, rater, person, etc) and a column for the "item" (movie, product, item, etc).
+ - **Integrating Your Own Data**: Likely, you aren't interested in building a recommendation engine for movies. You probably have a different product or service that you'd like to recommend to your customers. Fortunately, as long as your data is in a similar format to what is used here, you can use Turi Create's `recommender.create` to build a model. For example, if you had e-commerce data with shoppers, indexed by *shopper_id*, and products indexed by *product_id*, you could format it as shown below. At a minimum you need a column that contains a unique id for each "user" (shopper, viewer, rater, person, etc) and a column for the "item" (movie, product, item, etc).
 
 |  shopper_id |   product_id |   rating |   timestamp |
 |---------:|----------:|---------:|------------:|
