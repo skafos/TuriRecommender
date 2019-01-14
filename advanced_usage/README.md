@@ -2,7 +2,7 @@
 The purpose of this Advanced Usage Guide is to provide additional tooling, tips, and guidance for building recommendation engine models.
 
 ## Tips and "Gotchas"
--  **Training Data**: The example model is trained on a dataset of movie ratings. The format of this data is shown below. Note that there are two types of files that provide data in two formats: Actions (userID, movieID, rating, and timestamp.) and Metadata for each movie (movieID, title, genre).
+-  **Training Data**: The example model is trained on a dataset of movie ratings. The format of this data is shown below. Note that there are two types of files that provide data in two formats: Actions (userID, movieID, rating, timestamp) and Metadata for each movie (movieID, title, genre).
 
 <table>
 <tr><th>Actions </th><th>Items </th></tr>
@@ -28,7 +28,7 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 
 </td></tr> </table>
  
- - **Integrating Your Own Data**: Likely you aren't interested in building a recommendation engine for movies... What you will need to do is collect data that has a similar format. For example, if you had e-commerce data with shoppers, indexed by *shopper_id*, and products indexed by *product_id*, you could format it as shown below. At a minimum you need a column that contains a unique id for each "user" (shopper, viewer, rater, person, etc) and a column for the "item" (movie, product, item, etc).
+ - **Integrating Your Own Data**: Likely, you aren't interested in building a recommendation engine for movies. You probably have a a different product or service that you'd like to recommend to your customers. Fortunately, as long as your data is in a similar format to what is used here, you can use Turi Create's `recommender.create` to build a model. For example, if you had e-commerce data with shoppers, indexed by *shopper_id*, and products indexed by *product_id*, you could format it as shown below. At a minimum you need a column that contains a unique id for each "user" (shopper, viewer, rater, person, etc) and a column for the "item" (movie, product, item, etc).
 
 |  shopper_id |   product_id |   rating |   timestamp |
 |---------:|----------:|---------:|------------:|
@@ -38,10 +38,10 @@ The purpose of this Advanced Usage Guide is to provide additional tooling, tips,
 |        1 |        4132 |      2 |  1112184727 |
 |        1 |        1241 |      4 |  1112484580 |
 -  **Recommendation Engine Types**: In general there are two types of recommendation engines that you could create. 
-    -  **Implicit**: Implicit recommendation engines are trained on interaction data between users and items without any information about rating or how much they liked an item. These engines are simple and can learn preferences by simply observing what items users are interacting with. These models just require a dataset with 2 columns (user id and item id). Any product sales ledger would have this type of data as long as user ids and item ids are consistent across all transactions. 
+    -  **Implicit**: Implicit recommendation engines are trained on interaction data between users and items without any information about rating or how much they liked an item. These engines are simple and can learn preferences by simply observing what items users are interacting with. These models just require a dataset with 2 columns (user id and item id).
     -  **Explicit**: Explicit recommendation engines are slightly more complex and can be more accurate than implicit ones. They are trained on interaction data between users and items with an additional piece of information that conveys sentiment (rating, starts, thumbs-up/down, etc). These models require a dataset with a user id, item id, and a column of ratings, also referred to as a "target". Data like this is easier to extract if you have an app or site that collects interactions along with a rating (stars or thumbs).
 -  **Choosing The Right Type**: By default, you can let Turi Create choose the best model for you by using the `tc.recommender.create()` method. We recommend this for all beginners in the ML world.
-    -  If your data is "explicit", meaning observations include a rating given by the user, then the best model choice is a [Ranking Factorization Recommender](https://apple.github.io/turicreate/docs/api/generated/turicreate.recommender.ranking_factorization_recommender.RankingFactorizationRecommender.html).
+    -  If your data is "explicit" (as outlined above), then the best model choice is a [Ranking Factorization Recommender](https://apple.github.io/turicreate/docs/api/generated/turicreate.recommender.ranking_factorization_recommender.RankingFactorizationRecommender.html).
     -  If your data is "implicit", meaning observations don't contain any rating information, then the best model choice is either an [Item Similarity Recommender](https://apple.github.io/turicreate/docs/api/generated/turicreate.recommender.item_similarity_recommender.ItemSimilarityRecommender.html) or a Ranking Factorization Recommender.
     -  A thorough explanation of the different options and trade-offs can be found [here](https://apple.github.io/turicreate/docs/userguide/recommender/choosing-a-model.html).
 
