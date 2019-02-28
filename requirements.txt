@@ -1,2 +1,2 @@
-skafossdk==1.2.0.dev2
+skafossdk==1.2.1
 turicreate==5.3.1
