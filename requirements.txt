@@ -1,2 +1,3 @@
-skafossdk==1.2.1
+skafossdk==1.2.2
+mxnet-cu80==1.1.0.post0
 turicreate==5.3.1
